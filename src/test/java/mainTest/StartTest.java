@@ -43,7 +43,7 @@ public class StartTest {
         createNewPaste.pressPasteButton();
 
         String realPoster = driver.findElement(By.xpath("//*[@id=\"contentColumn\"]/div/h1[2]")).getText();
-        String sendKey = driver.findElement(By.xpath("//*[@id=\"contentColumn\"]/div/div/div/table/tbody/tr/td[2]/div/pre")).getText();
+        String sendKey = driver.findElement(By.xpath("//*[@id=\"contentColumn\"]/../..//td[2]/div/pre")).getText();
 
 
         Assert.assertTrue(realPoster.contains(termFillPoster), "Poster does not match");

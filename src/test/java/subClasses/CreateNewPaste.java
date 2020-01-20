@@ -13,7 +13,8 @@ public class CreateNewPaste {
     }
 
     public CreateNewPaste fillPoster(String termFillPoster) throws InterruptedException {
-        WebElement Poster = driver.findElement(By.xpath("/html/body/div/div/div/form/table/tbody/tr[3]/td/input"));
+        WebElement Poster = driver.findElement(By.xpath("//*[@id=\"id_poster\"]"));
+        //WebElement Poster = driver.findElement(By.xpath("/html/body/div/div/div/form/table/tbody/tr[3]/td/input"));
         Poster.sendKeys(termFillPoster);
         return this;
     }
@@ -25,13 +26,13 @@ public class CreateNewPaste {
     }
 
     public CreateNewPaste fillContent(String termFillContent) {
-        WebElement Content = driver.findElement(By.xpath("/html/body/div/div/div/form/table/tbody/tr[6]/td/textarea"));
+        WebElement Content = driver.findElement(By.xpath("//*[@id=\"id_content\"]"));
         Content.sendKeys(termFillContent);
         return this;
     }
 
     public CreateNewPaste pressPasteButton(){
-        WebElement Button = driver.findElement(By.xpath("//*[@id=\"pasteform\"]/table/tbody/tr[7]/td/input"));
+        WebElement Button = driver.findElement(By.xpath("//*[@value=\"Paste!\"]"));
         Button.click();
         return this;
     }
